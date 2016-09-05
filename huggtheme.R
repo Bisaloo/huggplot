@@ -1,4 +1,4 @@
-function (base_size = 11)
+huggtheme <- function (base_size = 11)
 {
   half_line <- base_size/2
   theme(panel.background = element_blank(),
