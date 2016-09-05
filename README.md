@@ -6,7 +6,7 @@ First, download the theme from the github repository
 ```
 library(ggplot2)
 
-my_ggtheme <-
+source('https://raw.githubusercontent.com/Bisaloo/huggplot/master/huggtheme.R')
 ```
 
 Now, it is time to try out this theme:
@@ -14,7 +14,7 @@ Now, it is time to try out this theme:
 ### Basic plot
 
 ```
-ggplot(Orange, aes(age, circumference, colour = Tree)) + geom_point() + my_ggtheme() + 
+ggplot(Orange, aes(age, circumference, colour = Tree)) + geom_point() + huggtheme() + 
   labs(title = 'Growth of orange trees')
 ```
 
@@ -24,7 +24,7 @@ ggplot(Orange, aes(age, circumference, colour = Tree)) + geom_point() + my_ggthe
 
 ```
 ggplot(ChickWeight[ChickWeight$Chick %in% seq(1:10),], aes(weight, Time, colour = Chick)) + 
-  geom_line() + my_ggtheme() + labs(title = 'Chick growth curves')
+  geom_line() + huggtheme() + labs(title = 'Chick growth curves')
 ```
 
 ![example 2](./examples/plot_example_2.png)
@@ -32,7 +32,7 @@ ggplot(ChickWeight[ChickWeight$Chick %in% seq(1:10),], aes(weight, Time, colour 
 ### Boxplot
 
 ```
-ggplot(morley, aes(as.factor(Expt), Speed)) + geom_boxplot() + my_ggtheme() +
+ggplot(morley, aes(as.factor(Expt), Speed)) + geom_boxplot() + huggtheme() +
   labs(title = 'Speed of light')
 ```  
 
