@@ -1,7 +1,8 @@
 huggtheme <- function (base_size = 11)
 {
   half_line <- base_size/2
-  theme(panel.background = element_blank(),
+  theme(panel.background = element_rect(fill = "transparent", colour = NA),
+        plot.background = element_rect(fill = "transparent", colour = NA),
         panel.border = element_blank(),
         panel.grid.major = element_line(colour = "grey75", size = 0.3, linetype = 'dotted'),
         panel.grid.minor = element_blank(),
@@ -17,7 +18,8 @@ huggtheme <- function (base_size = 11)
         axis.line.y = element_line(colour = "grey69"),
         axis.title.y = element_text(angle = 90, margin = margin(r = 0.8 * half_line, l = 0.8 * half_line/2), colour = 'grey22'),
         
-        legend.key = element_blank(),
+        legend.key = element_rect(fill = "transparent", colour = "transparent"),
+        legend.background = element_rect(fill = "transparent", colour = NA),
         legend.title = element_text(colour = "grey22"),
         legend.text = element_text(size = rel(0.8), colour = "grey50"),
         
