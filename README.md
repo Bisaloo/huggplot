@@ -1,5 +1,10 @@
 # huggplot
 
+## Features
+
+- Complete transparency: you can use it on non-white background document without it looking like crap.
+- Uncluttered and minimalistic to improve legibility
+
 ## Minimal working example
 
 First, download the theme from the github repository
