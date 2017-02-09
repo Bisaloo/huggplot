@@ -1,4 +1,4 @@
-huggtheme <- function (base_size = 11)
+huggtheme <- function (base_size = 11, default_font = "Fira Sans")
 {
   half_line <- base_size/2
   theme(panel.background = element_rect(fill = "transparent", colour = NA),
@@ -7,7 +7,7 @@ huggtheme <- function (base_size = 11)
         panel.grid.major = element_line(colour = "grey75", size = 0.3, linetype = "dotted"),
         panel.grid.minor = element_blank(),
         
-        text = element_text(family = "Fira sans", face = "plain", colour = "black",
+        text = element_text(family = default_font, face = "plain", colour = "black",
                             size = base_size, lineheight = 0.9, hjust = 0.5, vjust = 0.5,
                             angle = 0, margin = margin(), debug = FALSE),
         
