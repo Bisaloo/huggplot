@@ -5,6 +5,17 @@
 - Complete transparency: you can use it on non-white background document without it looking like crap.
 - Uncluttered and minimalistic to improve legibility
 
+## Important note: transparency and custom font support
+
+Transparency can only be achieved if you write your plot to your disk using a device that supports it.
+
+In particular, if you are saving your plot as a pdf, in order to keep a transparent background and use your custom font family, you must use the `cairo_pdf` device.
+Fortunately, this can easily be done using the Rstudio GUI or:
+
+```r
+ggsave('plot.pdf', device = cairo_pdf, bg = "transparent")
+```
+
 ## Minimal working example
 
 First, download the theme from the github repository
@@ -16,17 +27,6 @@ source('https://raw.githubusercontent.com/Bisaloo/huggplot/master/huggtheme.R')
 ```
 
 Now, it is time to try out this theme:
-
-## Important note: transparency and custom font support
-
-Transparency can only be achieved if you write your plot to your disk using a device that supports it.
-
-In particular, if you are saving your plot as a pdf, in order to keep a transparent background and use your custom font family, you must use the `cairo_pdf` device.
-Fortunately, this can easily be done using the Rstudio GUI or:
-
-```r
-ggsave('plot.pdf', device = cairo_pdf, bg = "transparent")
-```
 
 ### Basic plot
 
