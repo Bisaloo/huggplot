@@ -8,7 +8,8 @@
 ## Minimal working example
 
 First, download the theme from the github repository
-```
+
+```r
 library(ggplot2)
 
 source('https://raw.githubusercontent.com/Bisaloo/huggplot/master/huggtheme.R')
@@ -29,7 +30,7 @@ ggsave('plot.pdf', device = cairo_pdf, bg = "transparent")
 
 ### Basic plot
 
-```
+```r
 ggplot(Orange, aes(age, circumference, colour = Tree)) + geom_point() + huggtheme() + 
   labs(title = 'Growth of orange trees')
 ```
@@ -38,7 +39,7 @@ ggplot(Orange, aes(age, circumference, colour = Tree)) + geom_point() + huggthem
 
 ### Line plot
 
-```
+```r
 ggplot(ChickWeight[ChickWeight$Chick %in% seq(1:10),], aes(weight, Time, colour = Chick)) + 
   geom_line() + huggtheme() + labs(title = 'Chick growth curves')
 ```
@@ -47,7 +48,7 @@ ggplot(ChickWeight[ChickWeight$Chick %in% seq(1:10),], aes(weight, Time, colour 
 
 ### Boxplot
 
-```
+```r
 ggplot(morley, aes(as.factor(Expt), Speed)) + geom_boxplot() + huggtheme() +
   labs(title = 'Speed of light')
 ```  
